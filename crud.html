@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JS CRUD</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <!-- FOnt Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <style>
+    footer {
+      position: absolute;
+      bottom: 20px;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+      <div class="row my-3 px-3">
+          <a href="index.html" class="btn btn-outline-primary">Back</a>
+      </div>
+    <div class="row bg-light py-3">
+      <div class="col-12 d-flex">
+        <h4 class="mx-auto">Email and Password CRUD Operations</h4>
+      </div>
+      <div class="w-100">
+        <hr>
+      </div>
+      <div class="col-sm-6">
+
+        <div id="form">
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Selected ID </label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control-plaintext" id="selected-id" value="">
+            </div>
+            <label class="col-sm-4 col-form-label">Selected Email </label>
+            <div class="col-sm-8">
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail" class="col-sm-4 col-form-label">Email</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputPassword" class="col-sm-4 col-form-label">Password</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-8 offset-sm-4">
+              <input id="submit" type="submit" class="btn btn-info" value="Add">
+              <span id="submit-div"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" class="edit" value="1">
+      <!-- /col-sm-6 -->
+      <div class="col-sm-6">
+        <div class="bg-light py-2 my-3">
+          <div class="col-6">
+            <label for="">PER PAGE</label>
+            <select id="per-page" class="form-control">
+
+              <option value="1">1</option>
+              <option value="3" selected>3</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="500">500</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped bg-light">
+            <thead>
+              <tr>
+                <td>Serial</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Options</td>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+          </table>
+        </div>
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" id="pagination" class="d-none">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous" id="previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next" id="next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /Pagination -->
+        <!-- <button class="btn btn-info" id="console">Console</button> -->
+      </div>
+    </div>
+    
+  </div>
+  <script src="js/crud.js"></script>
+</body>
+
+</html>
