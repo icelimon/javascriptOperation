@@ -92,7 +92,7 @@ function createRow(serial, email, password) {
   passwordtd.innerHTML = password;
   var fa_edit = document.createElement('i');
   fa_edit.setAttribute('class', 'fa fa-edit');
-  var editBtn = createButton('edit',serial,'btn-warning',fa_edit);
+  var editBtn = createButton('edit',serial,'btn-outline-info',fa_edit);
   optiontd.appendChild(editBtn);
   tr.appendChild(serialtd);
   tr.appendChild(emailtd);
